@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Yandex.Disk Dark MOD
 // @namespace     http://userstyles.org
-// @description	  Update 11.07.2021 (fix)
+// @description	  Update 20.01.2022 (fix)
 // @author        QZMTCH
 // @homepage      https://userstyles.org/styles/194676
 // @include       http://disk.yandex.ru/*
@@ -25,12 +25,16 @@
 // @include       http://*.docviewer.yandex.com/*
 // @include       https://*.docviewer.yandex.com/*
 // @run-at        document-start
-// @version       0.20210711124055
+// @version       0.20220120192450
 // ==/UserScript==
 (function() {var css = [
-	".header, .root, html, .header, .journal-filter, .publish-resource-tumbler, .sidebar_fixed, .listing-item_selected, .folder-content__header, .PSHeader, .PSHeader_theme_light",
+	".header, .root, html, .header, .journal-filter, .publish-resource-tumbler, .sidebar_fixed, .listing-item_selected, .folder-content__header, .PSHeader, .PSHeader_theme_light, .root__content-wrap",
 	"{",
 	"    background:#111!important;",
+	"}",
+	"",
+	"html:not(.m-mobile) .root:not(.root_docs-view) .root__content:not(.root__content_with-widgets) .root__content-wrap:before{",
+	"    background:none;",
 	"}",
 	"",
 	".journal-filter{",
@@ -47,7 +51,7 @@
 	"{",
 	"box-shadow: 0 0 0 0 rgba(0,0,0,.1);",
 	"}",
-	".client-listing:not(.client-listing_loading):not(.client-listing_stub):not(.client-listing_type_trash), .burger-sidebar__sidebar, .icons-services-menu__all-services-link, .listing-wrap, .dialog-fast-scroll, .textinput__control, .b-import-social__inner, .menu__item:hover, .client-listing:not(.client-listing_loading):not(.client-listing_stub).client-listing_type_trash, .page:before, .listing-search-stub__item:hover, .create-resource-popup-with-anchor__create-item:focus, .create-resource-popup-with-anchor__create-item:hover, .gnc-notifications-item__inner, .gnc-notification-center button, .content_other, .content-inner.root, .content-inner_white, .root__content-inner_page_listing, .root__content-inner_page_photo, .desktop-fast-scroll__year-title, .root__content-inner_page_albums, .root__content-inner_page_album, .ns-view-notifications, .folder-content__header-shadow, .folder-content__header-shadow-overlay",
+	".client-listing:not(.client-listing_loading):not(.client-listing_stub):not(.client-listing_type_trash), .burger-sidebar__sidebar, .icons-services-menu__all-services-link, .listing-wrap, .dialog-fast-scroll, .textinput__control, .b-import-social__inner, .menu__item:hover, .client-listing:not(.client-listing_loading):not(.client-listing_stub).client-listing_type_trash, .page:before, .listing-search-stub__item:hover, .create-resource-popup-with-anchor__create-item:focus, .create-resource-popup-with-anchor__create-item:hover, .gnc-notifications-item__inner, .gnc-notification-center button, .content_other, .content-inner.root, .content-inner_white, .root__content-inner_page_listing, .root__content-inner_page_photo, .desktop-fast-scroll__year-title, .root__content-inner_page_albums, .root__content-inner_page_album, .ns-view-notifications, .folder-content__header-shadow, .folder-content__header-shadow-overlay, .LeftColumn",
 	"{",
 	"    background:#222!important;",
 	"}",
@@ -78,15 +82,15 @@
 	"{",
 	"    background-color: #f8f8f86b;",
 	"}",
-	".listing-item, p, .icons-services-menu__service-link, .dialog-fast-scroll__group, .dialog__title, .b-import-social__other, .user2__add-account.user-account, .user2__menu .menu__item_type_link, .journal-group__container, .journal-filter__before, .b-tree__name, .menu_theme_normal .menu__item, .b-select-folder .b-select-folder__title_inner, .button2_size_m .button2__icon_side_left~.button2__text, .b-space, .footer__link:not(:hover), .create-resource-button__text, .relative-date, .gnc-settings__setting-name, .journal-group-item__name, .client-confirmation-dialog__title, .client-confirmation-dialog__content, .Button2",
+	".listing-item, p, .icons-services-menu__service-link, .dialog-fast-scroll__group, .dialog__title, .b-import-social__other, .user2__add-account.user-account, .user2__menu .menu__item_type_link, .journal-group__container, .journal-filter__before, .b-tree__name, .menu_theme_normal .menu__item, .b-select-folder .b-select-folder__title_inner, .button2_size_m .button2__icon_side_left~.button2__text, .b-space, .footer__link:not(:hover), .create-resource-button__text, .relative-date, .gnc-settings__setting-name, .journal-group-item__name, .client-confirmation-dialog__title, .client-confirmation-dialog__content, .Button2, .Link, .listing-scans-stub__title",
 	"{",
 	"    color: #989898!important;",
 	"}",
-	".resources-action-bar:not(.resources-action-bar_visible), .link_theme_dark, .info-space__text, .cluster-slice-title__part, ._nb-small-pseudo-button",
+	".resources-action-bar:not(.resources-action-bar_visible), .link_theme_dark, .cluster-slice-title__part, ._nb-small-pseudo-button",
 	"{",
-	"    color:white !important;",
+	"    color:#fff !important;",
 	"}",
-	"._nb-toggler-text",
+	"._nb-toggler-text, .info-space__text",
 	"{",
 	"        color:black !important;",
 	"}",
